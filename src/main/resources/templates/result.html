@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" type="text/css" media="all" th:href="@{/css/bootstrap.min.css}">
+
+        <title>Result</title>
+    </head>
+    <body class="p-3 mb-2 bg-light text-black">
+        <div th:action="@{/result}" class="container justify-content-center w-50 p-3" style="margin-top: 5em;">
+            <div th:if="${param.addfilesuccess}" class="alert alert-success fill-parent">
+                <h1 class="display-5">Success</h1>
+                <span>Your file was successfully added. Click <a th:href="@{/home}" id="clickbait-addfilesuccess">here</a> to continue.</span>
+            </div>
+            <div th:if="${param.delfilesuccess}" class="alert alert-success fill-parent">
+                <h1 class="display-5">Success</h1>
+                <span>Your file was successfully deleted. Click <a th:href="@{/home}" id="clickbait-delfilesuccess">here</a> to continue.</span>
+            </div>
+            <div th:if="${param.addnotesuccess}" class="alert alert-success fill-parent">
+                <h1 class="display-5">Success</h1>
+                <span>Your note was successfully added. Click <a th:href="@{/home}" id="clickbait-savenotesuccess">here</a> to continue.</span>
+            </div>
+            <div th:if="${param.editnotesuccess}" class="alert alert-success fill-parent">
+                <h1 class="display-5">Success</h1>
+                <span>Your note was successfully edited. Click <a th:href="@{/home}" id="clickbait-editnotesuccess">here</a> to continue.</span>
+            </div>
+            <div th:if="${param.delnotesuccess}" class="alert alert-success fill-parent">
+                <h1 class="display-5">Success</h1>
+                <span>Your note was successfully deleted. Click <a th:href="@{/home}" id="clickbait-delnotesuccess">here</a> to continue.</span>
+            </div>
+            <div th:if="${param.addcredsuccess}" class="alert alert-success fill-parent">
+                <h1 class="display-5">Success</h1>
+                <span>Your credential was successfully added. Click <a th:href="@{/home}" id="clickbait-savecredsuccess">here</a> to continue.</span>
+            </div>
+            <div th:if="${param.editcredsuccess}" class="alert alert-success fill-parent">
+            <h1 class="display-5">Success</h1>
+            <span>Your credential was successfully edited. Click <a th:href="@{/home}" id="clickbait-editcredsuccess">here</a> to continue.</span>
+            </div>
+            <div th:if="${param.delcredsuccess}" class="alert alert-success fill-parent">
+            <h1 class="display-5">Success</h1>
+            <span>Your credential was successfully deleted. Click <a th:href="@{/home}" id="clickbait-delcredsuccess">here</a> to continue.</span>
+            </div>
+            <div th:if="${param.errornofileselected}" class="alert alert-danger fill-parent">
+                <h1 class="display-5">Error</h1>
+                <span>You didn't select a file to upload. Click <a th:href="@{/home}" id="clickbait-errorfsel">here</a> to continue.</span>
+            </div>
+        </div>
+    </body>
+</html>
